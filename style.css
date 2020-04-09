@@ -20,6 +20,8 @@ body {
   width: 100%;
   padding: 2em 3em;
   background: plum;
+  z-index: 3;
+  box-shadow: 0 4px 30px rgba(128, 0, 128, 0.5);
 }
 
 .topbar nav {
@@ -62,24 +64,117 @@ body {
 /* --- Banniere --- */
 
 .banniere {
-  background: no-repeat center center / cover url("img/banniere.jpg");
-  height: 400px;
+  background: no-repeat center center / cover url("img/banniere1.jpg");
+  height: 350px;
 }
 
 /* --- Container --- */
 
 .container {
-  height: 100vh;
+  height: 100%;
   float: left;
-  background: palegreen;
-  width: 70%;
+  background: rgb(235, 215, 235);
+  width: calc(100% - 30%);
+  box-shadow: 0 4px 30px rgba(128, 0, 128, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Article --- */
+
+.box {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.article {
+  overflow: hidden;
+  margin: 30px 10px;
+}
+
+.article-img {
+  float: left;
+  width: 300px;
+  margin-right: 1.5em;
+}
+
+.article-img img {
+  width: 100%;
+  height: auto;
+}
+
+.article p {
+  font-size: 0.8rem;
+  color: rgb(66, 0, 66);
+  text-align: justify;
+}
+
+.date {
+  margin-top: 1em;
+  font-size: 0.9rem;
+  color: rgba(128, 0, 128, .6);
+}
+
+.article-title {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.article-title a {
+  text-decoration: none;
+  color: purple;
+}
+
+.article-title a:hover {
+  text-decoration: underline;
 }
 
 /* --- Sidebar --- */
 
 .sidebar {
-  height: 100vh;
+  height: 140vh;
   float: right;
-  background: red;
+  background: plum;
   width: 30%;
+  padding: 0 2em 0 2em;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  color: rgb(66, 0, 66);
+  margin-bottom: 0;
+  margin-top: 1.5em;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: purple;
+  opacity: 1;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+  opacity: .5;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 2em;
+  line-height: 2.3;
+  padding: 0;
+}
+
+.sidebar hr {
+  border: none;
+  background: purple;
+  height: 1px;
+  margin: 3em 0;
+}
+
+/* --- Footer --- */
+
+footer {
+  clear: both;
 }
