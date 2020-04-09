@@ -178,3 +178,8 @@ body {
 footer {
   clear: both;
 }
+
+.yes {
+  margin: 0;
+  font-size: 10em;
+}
